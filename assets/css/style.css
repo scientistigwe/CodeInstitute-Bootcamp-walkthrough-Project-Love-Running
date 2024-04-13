@@ -65,3 +65,16 @@ main {
 footer {
     background-color: darksalmon;
 }
+
+/* Media query: tablets and larger (768px and above) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        padding-right: 1rem;
+        width: fit-content;
+    }
+}
