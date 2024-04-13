@@ -69,17 +69,18 @@ nav {
 }
 
 /* nav toggle */
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle{
+#nav-toggle {
     display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
+
 /* Main Styling */
 main {
     background-color: beige;
@@ -95,6 +96,7 @@ footer {
 
 /* Media query: tablets and larger (768px and above) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -104,31 +106,35 @@ footer {
         width: fit-content;
     }
 
-    #menu{
+    #menu {
         display: flex;
     }
 
-    #menu >li{
+    #menu>li {
         padding-left: 1rem;
     }
 
-    .nav-toggle-label{
+    .nav-toggle-label {
         display: none;
     }
 
-    #logo{
+    #logo {
         font-size: 200%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
-    main{
+
+    main {
         margin-top: 75px;
     }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
+
     /* Header */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
+
+vcffghjjkk
