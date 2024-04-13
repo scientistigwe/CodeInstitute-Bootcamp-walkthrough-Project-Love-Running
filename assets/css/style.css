@@ -54,6 +54,17 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* Toggle the nav bar menu */
+nav{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #252525;
+    left: 0;
+    display: none;
+}
+
 /* Main Styling */
 main {
     background-color: beige;
