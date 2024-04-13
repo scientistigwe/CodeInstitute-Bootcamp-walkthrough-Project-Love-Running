@@ -26,6 +26,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
@@ -54,11 +57,36 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* Toggle the nav bar menu */
+nav {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #252525;
+    left: 0;
+    display: none;
+    top: 100%;
+}
+
+/* nav toggle */
+#nav-toggle:checked~nav{
+    display: block;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    font-size: 2rem;
+}
 /* Main Styling */
 main {
     background-color: beige;
     /* Make main content take most space and push footer down*/
     flex: 1 0 auto;
+    margin-top: 50px;
 }
 
 /* Footer Styling */
