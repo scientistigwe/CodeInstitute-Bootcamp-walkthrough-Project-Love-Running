@@ -1,4 +1,5 @@
 /* Google fonts imports */
+@import url('https://fonts.googleapis.com/css2?family=lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Default Style */
 * {
@@ -12,9 +13,19 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'lato', sans-serif;
 
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* Header Styling */
@@ -35,13 +46,6 @@ header a {
     color: inherit;
 }
 
-h1 {
-    font-family: 'oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
-
 #menu {
     letter-spacing: 4px;
     font-size: 110%;
@@ -56,7 +60,7 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Toggle the nav bar menu */
+/* Toggle nav bar menu */
 nav {
     position: absolute;
     background-color: #fff;
@@ -81,42 +85,65 @@ nav {
     font-size: 2rem;
 }
 
-#menu {
-    display: flex;
-}
-
-#menu>li {
-    padding-left: 1rem;
-}
-
-.nav-toggle-label {
-    display: block;
-}
-
-#logo {
-    font-size: 200%;
-    line-height: 75px;
-    margin: 0 0.5rem;
-}
-
 /* Main Styling */
 main {
     /* Make main content take most space and push footer down*/
     flex: 1 0 auto;
-    margin-top: 150px;
+    margin-top: 47px;
 }
 
 /* Hero section */
-#hero{
+#hero {
     height: 600px;
     width: 100%;
-    background:url("../images/hero-image.webp") no-repeat center center/cover;
-}
-#hero img{
-    overflow: hidden;
-    justify-content: center;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 }
 
+.cover-text {
+    background-color: rgba(241, 109, 107, .7);
+    position: absolute;
+    font-size: 130%;
+    bottom: 30px;
+    width: 80%;
+    padding-top: 40px;
+    padding-left: 10px;
+    min-height: 200px;
+    border-radius: 5px;
+}
+
+.cover-text>h2,
+.cover-text>h3 {
+    color: #fff;
+}
+
+/* Reasons section */
+#reasons {
+    margin: 20px auto;
+    width: 90%;
+}
+
+#reasons h2 {
+    text-align: center;
+    font-size: 280%;
+    margin-bottom: 20px;
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+.benefit-physical, .benefit-mental{
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.benefit-physical>p, benefit-mental>p{
+    position: relative;
+    left: 20px;
+    padding-right: 25px;
+}
 /* Footer Styling */
 #social-networks {
     display: flex;
@@ -146,12 +173,39 @@ main {
         padding-right: 1rem;
         width: fit-content;
     }
-    main {
-        margin-top: 75px;
+
+    #menu {
+        display: flex;
     }
 
-    .nav-toggle-label{
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
         display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+
+    /* Hero image */
+    .cover-text {
+        width: 300px;
+        right: 50px;
+    }
+    .benefit-mental{
+        justify-content: left;
+        text-align: left;
     }
 }
 
