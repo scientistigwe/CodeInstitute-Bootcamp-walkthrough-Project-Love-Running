@@ -110,8 +110,13 @@ main {
 #hero{
     height: 600px;
     width: 100%;
-    background-color: aquamarine;
+    background:url("../images/hero-image.webp") no-repeat center center/cover;
 }
+#hero img{
+    overflow: hidden;
+    justify-content: center;
+}
+
 /* Footer Styling */
 #social-networks {
     display: flex;
