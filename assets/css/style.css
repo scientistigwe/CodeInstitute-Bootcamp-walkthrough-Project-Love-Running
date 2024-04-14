@@ -81,17 +81,38 @@ nav {
     font-size: 2rem;
 }
 
-/* Main Styling */
-main {
-    background-color: beige;
-    /* Make main content take most space and push footer down*/
-    flex: 1 0 auto;
-    margin-top: 50px;
+#menu {
+    display: flex;
 }
 
+#menu>li {
+    padding-left: 1rem;
+}
+
+.nav-toggle-label {
+    display: block;
+}
+
+#logo {
+    font-size: 200%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+}
+
+/* Main Styling */
+main {
+    /* Make main content take most space and push footer down*/
+    flex: 1 0 auto;
+    margin-top: 150px;
+}
+
+/* Hero section */
+#hero{
+    height: 600px;
+    width: 100%;
+    background-color: aquamarine;
+}
 /* Footer Styling */
-
-
 #social-networks {
     display: flex;
     justify-content: space-evenly;
@@ -100,12 +121,15 @@ main {
     list-style: none;
 }
 
-#social-networks i{
+#social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
 
+/***************************
+        MEDIA QUERIES
+**************************/
 /* Media query: tablets and larger (768px and above) */
 @media screen and (min-width: 768px) {
 
@@ -117,30 +141,16 @@ main {
         padding-right: 1rem;
         width: fit-content;
     }
-
-    #menu {
-        display: flex;
-    }
-
-    #menu>li {
-        padding-left: 1rem;
-    }
-
-    .nav-toggle-label {
-        display: none;
-    }
-
-    #logo {
-        font-size: 200%;
-        line-height: 75px;
-        margin: 0 0.5rem;
-    }
-
     main {
         margin-top: 75px;
     }
+
+    .nav-toggle-label{
+        display: none;
+    }
 }
 
+/* Media query: laptops and larger (992px and above) */
 @media screen and (min-width: 992px) {
 
     /* Header */
