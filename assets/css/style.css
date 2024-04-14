@@ -1,5 +1,5 @@
 /* Google fonts imports */
- 
+
 /* Default Style */
 * {
     padding: 0;
@@ -90,8 +90,20 @@ main {
 }
 
 /* Footer Styling */
-footer {
-    background-color: darksalmon;
+
+
+#social-networks {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 0;
+    list-style: none;
+}
+
+#social-networks i{
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /* Media query: tablets and larger (768px and above) */
