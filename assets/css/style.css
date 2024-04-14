@@ -129,21 +129,63 @@ main {
     margin-bottom: 20px;
 }
 
-hr {
+.benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
 
-.benefit-physical, .benefit-mental{
+.benefit-physical>div, .benefit-mental>div{
     line-height: 20px;
     margin-bottom: 20px;
 }
 
-.benefit-physical>p, benefit-mental>p{
-    position: relative;
-    left: 20px;
-    padding-right: 25px;
+.benefits p{
+    padding-right: 0 20px;
 }
+
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Meetup Times section */
+#times {
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#times div {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* Creates a grid of meetup time divs over the background image */
+    border: 2px solid white;
+}
+
+#times h3 {
+    /* Override the heading colour set in general styles */
+    color: #fafafa;
+}
+
 /* Footer Styling */
 #social-networks {
     display: flex;
@@ -203,9 +245,22 @@ hr {
         width: 300px;
         right: 50px;
     }
-    .benefit-mental{
-        justify-content: left;
-        text-align: left;
+    /* Reasons section */
+    .benefits-physical,
+    .benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .benefits-physical>div,
+    .benefits-mental>div {
+        width: 75%;
+    }
+
+    .benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
     }
 }
 
@@ -215,5 +270,33 @@ hr {
     /* Header */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    .benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    .benefits-mental {
+        order: 1;
+    }
+
+    .benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    .benefits-physical > div {
+        align-self: flex-end;
     }
 }
