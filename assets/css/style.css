@@ -28,9 +28,10 @@ h3 {
     color: #252525;
 }
 
-.hidden-header{
+.hidden-header {
     display: none;
 }
+
 /* Header Styling */
 header {
     background-color: #fff;
@@ -90,9 +91,13 @@ nav {
 
 /* Main Styling */
 main {
-    /* Make main content take most space and push footer down*/
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero section */
@@ -137,12 +142,13 @@ main {
     margin: 5px 0;
 }
 
-.benefit-physical>div, .benefit-mental>div{
+.benefit-physical>div,
+.benefit-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
 
-.benefits p{
+.benefits p {
     padding: 0 20px;
 }
 
@@ -164,14 +170,15 @@ main {
 }
 
 /* Meet-up Times Style */
-#times{
+#times {
     background: url("../images/dublin-city.webp") no-repeat center center/cover;
     display: flex;
     flex-wrap: wrap;
 }
-#times div{
+
+#times div {
     color: #fafafa;
-    background-color: rgba(0,0,0, .6);
+    background-color: rgba(0, 0, 0, .6);
     text-align: center;
     padding: 15px;
     /* This will not wrap on screens of less than 400px wide.
@@ -182,17 +189,65 @@ main {
     border: 2px solid #fafafa;
 }
 
-#times h3{
+#times h3 {
     color: #fafafa;
 }
 
 /* Gallery page */
-#photos img{
+#photos img {
     width: 100%;
     line-height: 1em;
 }
+
 #photos {
     line-height: 0;
+}
+
+/* Sign up page */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+
+}
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input label input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
 }
 
 /* Footer Styling */
@@ -215,7 +270,7 @@ main {
 **************************/
 /* Media query: large or landscape phones (576px and above) */
 @media screen and (min-width: 576px) {
-    #photos{
+    #photos {
         column-count: 2;
         column-gap: 0;
     }
@@ -262,30 +317,56 @@ main {
         width: 300px;
         right: 50px;
     }
+
     /* Reasons section */
-    .benefit-physical, .benefit-mental{
+    .benefit-physical,
+    .benefit-mental {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .benefit-physical>div, .benefit-mental>div{
+    .benefit-physical>div,
+    .benefit-mental>div {
         width: 75%;
     }
-    
-    .benefit-mental div{
+
+    .benefit-mental div {
         text-align: end;
         align-self: flex-end;
     }
+
     .benefits div {
         font-size: 120%;
         line-height: 110%;
     }
 
     /* Gallery section*/
-    #photos{
+    #photos {
         column-count: 3;
         column-gap: 0;
+    }
+
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
     }
 
 }
@@ -297,25 +378,27 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-    .benefits{
+
+    .benefits {
         display: flex;
     }
-    .benefit-mental div{
+
+    .benefit-mental div {
         order: 3;
         align-self: flex-start;
     }
 
-    .benefit-physical div{
+    .benefit-physical div {
         align-self: flex-end;
     }
 
-    .benefit-mental{
+    .benefit-mental {
         order: 3;
     }
 
-        /* Gallery section*/
-        #photos{
-            column-count: 4;
-            column-gap: 0;
-        }
-} 
+    /* Gallery section*/
+    #photos {
+        column-count: 4;
+        column-gap: 0;
+    }
+}

@@ -26,31 +26,64 @@
         <a href="index.html">
             <h1 id="logo">Love Running</h1>
         </a>
-        <input type="checkbox" id="nav-toggle" name="nav-toggle"> 
+        <input type="checkbox" id="nav-toggle" name="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"></i></label>
         <nav>
             <ul id="menu">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./signup.html"  class="active">Sign up</a></li>
+                <li><a href="./signup.html" class="active">Sign up</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main content -->
-    <main>Main content</main>
-    <div>
-        <p>This is the signup</p>
-        <p>I am testing commiting from Gitpod to ensure it is not broken.</p>
-    </div>
+    <main>
+        <section id="signup">
+            <form id="signup-form" method="POST" action="https://formdump.codeinstitute.net">
+                <h2><i class="fa-solid fa-heart-pulse"></i> Lets get you signed up!</h2>
+                <div class="text-input">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" name="first-name" type="text" placeholder="Enter first name">
+                    <br>
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" name="last-name" type="text" placeholder="Enter last name">
+                    <br>
+                    <label for="email-address">Email Address</label>
+                    <input id="email-address" name="email-address" type="email" placeholder="Enter email address">
+                    <br>
+                </div>
+                <div class="radio-buttons">
+                    <label for="road">Road</label>
+                    <input id="road" name="running-preference" type="radio" value="Road">
+                    <br>
+                    <label for="trail">Trail</label>
+                    <input id="trail" name="running-preference" type="radio" value="Trail">
+                    <br>
+                    <label for="both">Both</label>
+                    <input id="both" name="running-preference" type="radio" value="Both">
+                    <br>
+                </div>
+                <button type="submit" class="join-button">Submit</button>
 
+            </form>
+
+        </section>
+    </main>
     <!-- Footer content -->
     <footer>
         <ul id="social-networks">
-            <li><a href="http://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our facebook page (open in a new tab)"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="http://www.twitter.com" target="_blank" rel="noopener" aria-label="Visit our twitter page (open in a new tab)"><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a href="http://www.github.com" target="_blank" rel="noopener" aria-label="Visit our github page (open in a new tab)"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="http://www.instagram.com" target="_blank" rel="noopener" aria-label="Visit our instagram page (open in a new tab)"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="http://www.facebook.com" target="_blank" rel="noopener"
+                    aria-label="Visit our facebook page (open in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li><a href="http://www.twitter.com" target="_blank" rel="noopener"
+                    aria-label="Visit our twitter page (open in a new tab)"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li><a href="http://www.github.com" target="_blank" rel="noopener"
+                    aria-label="Visit our github page (open in a new tab)"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="http://www.instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our instagram page (open in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+            </li>
         </ul>
     </footer>
     <!-- Font Awesome kit -->
