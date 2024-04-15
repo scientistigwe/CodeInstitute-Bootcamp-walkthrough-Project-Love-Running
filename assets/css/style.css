@@ -28,6 +28,9 @@ h3 {
     color: #252525;
 }
 
+.hidden-header{
+    display: none;
+}
 /* Header Styling */
 header {
     background-color: #fff;
@@ -160,7 +163,28 @@ main {
     justify-content: center;
 }
 
+/* Meet-up Times Style */
+#times{
+    background: url("../images/dublin-city.webp") no-repeat center center/cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+#times div{
+    color: #fafafa;
+    background-color: rgba(0,0,0, .6);
+    text-align: center;
+    padding: 15px;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* Create a grid of meetup time dives over the background imae */
+    border: 2px solid #fafafa;
+}
 
+#times h3{
+    color: #fafafa;
+}
 
 /* Footer Styling */
 #social-networks {
@@ -253,6 +277,15 @@ main {
     .benefits{
         display: flex;
     }
+    .benefit-mental div{
+        order: 3;
+        align-self: flex-start;
+    }
+
+    .benefit-physical div{
+        align-self: flex-end;
+    }
+
     .benefit-mental{
         order: 3;
     }
